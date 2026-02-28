@@ -1,0 +1,128 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{etoolbox} % for \forcsvlist and list processing
+
+% ========== Game Engine ==========
+% Define a helper to process choices
+\newcommand{\choice}[2]{%
+  \hyperlink{#2}{#1}\par
+}
+
+% Define a scene: \scene{id}{text}{choice1, choice2, ...}
+% Choices should be given as a comma-separated list of \choice{desc}{target}
+\makeatletter
+\newcommand{\scene}[3]{%
+  \clearpage
+  \hypertarget{#1}{}%
+  \section*{Scene: #1}
+  #2
+  \par\medskip
+  \ifstrempty{#3}{%
+    \textcolor{gray}{(The end.)}%
+  }{%
+    \noindent\textbf{What do you do?}\par
+    \@for\next:=#3\do{%
+      \next
+    }%
+  }%
+  \clearpage
+}
+\makeatother
+
+% ========== Game Data ==========
+\begin{document}
+
+\title{The Rubber Duck Debugger}
+\author{A LaTeX Adventure}
+\date{}
+\maketitle
+
+\clearpage
+\hypertarget{start}{}
+\section*{Introduction}
+You're staring at a screen full of error messages.
+Your LaTeX document won't compile, and you've been debugging for hours.
+On the corner of your desk sits a cheerful rubber duck—made of soft, squeaky latex.
+Maybe it's time to explain your code to the duck.
+\begin{center}
+  \hyperlink{office}{Start Game}
+\end{center}
+\clearpage
+
+% Define each scene with its id, text, and choices
+\scene{office}{%
+  You are in your office. The rubber duck sits on your desk, gleaming faintly.
+  A coffee mug (empty) and a notepad are nearby. Your computer displays the error:
+  \texttt{! Undefined control sequence. l.12 \string\latex}
+}{%
+  \choice{Examine the duck}{duck},
+  \choice{Check the notepad}{notepad},
+  \choice{Go to the breakroom for coffee}{breakroom},
+  \choice{Look at the computer again}{computer}
+}
+
+\scene{duck}{%
+  You pick up the rubber duck. It's soft and squeaks when you squeeze it.
+  ``Quack!'' it says encouragingly. ``Tell me about your code.''
+}{%
+  \choice{Explain the error to the duck}{explain},
+  \choice{Put the duck down and look elsewhere}{office}
+}
+
+\scene{explain}{%
+  You describe the error to the duck: ``It says `Undefined control sequence' at \texttt{\string\latex}.''
+  The duck tilts its head. Suddenly, you realize: you wrote \texttt{\string\latex} but you meant \texttt{\string\LaTeX}!
+  The duck's latex body seems to glow with insight.
+}{%
+  \choice{Fix the code}{win},
+  \choice{Thank the duck and take a break}{breakroom}
+}
+
+\scene{win}{%
+  You change \texttt{\string\latex} to \texttt{\string\LaTeX} and recompile.
+  The document compiles perfectly! The rubber duck squeaks happily.
+  \textbf{You win!}
+}{} % empty choices = ending
+
+\scene{notepad}{%
+  The notepad contains scribbled notes: ``Check all backslashes—remember, LaTeX commands start with \string\\.''
+}{%
+  \choice{Go back to the desk}{office},
+  \choice{Go to breakroom}{breakroom}
+}
+
+\scene{breakroom}{%
+  You wander into the breakroom. The coffee pot is full. A colleague is microwaving fish.
+}{%
+  \choice{Pour coffee}{coffee},
+  \choice{Go back to office}{office},
+  \choice{Complain about the smell}{smell}
+}
+
+\scene{coffee}{%
+  You take a sip of coffee. It's hot and gives you energy.
+  You return to your desk feeling refreshed.
+}{%
+  \choice{Back to office}{office}
+}
+
+\scene{smell}{%
+  You mention the fish smell. Your colleague says, ``Oh, that's just my rubber lunchbox.''
+  No further insight gained.
+}{%
+  \choice{Back to office}{office}
+}
+
+\scene{computer}{%
+  You stare at the error again: \texttt{! Undefined control sequence. l.12 \string\latex}
+  The backslash before 'latex' looks wrong—shouldn't it be capitalized?
+}{%
+  \choice{Try \texttt{\string\LaTeX} instead}{win},
+  \choice{Ask the duck for help}{duck},
+  \choice{Give up and get coffee}{breakroom}
+}
+
+\end{document}
