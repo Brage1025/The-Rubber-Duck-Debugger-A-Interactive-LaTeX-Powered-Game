@@ -2,11 +2,11 @@
 
 # The Rubber Duck Debugger
 
-[![CC BY 4.0][cc-by-shield]][cc-by]
+[![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
 ![LaTeX](https://img.shields.io/badge/Made%20with-LaTeX-008080.svg?logo=latex)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
-![Stars]()
+![Stars](https://github.com/Brage1025/The-Rubber-Duck-Debugger-A-Interactive-LaTeX-Powered-Game?style=social)
 
 **A LaTeX‑powered interactive fiction game about debugging with a rubber duck**
 
@@ -90,7 +90,7 @@ You are free to share and adapt the material for any purpose, even commercially,
 
 ## Contact Info
 
-Email: [meb102025@gmail.com]
+Email: meb102025@gmail.com
 
 ---
 
@@ -101,25 +101,3 @@ Created by [Brage1025](https://github.com/Brage1025)
 _"To &lt;div&gt; or not to &lt;div&gt;, that is the question."_
 
 </div>
-
-Create a `.gitignore` file with:
-
-```
-*.aux
-*.log
-*.out
-*.toc
-*.bbl
-*.blg
-*.synctex.gz
-*.fls
-*.fdb_latexmk
-*.pdf
-!README.pdf   # if you ever want to include a prebuilt PDF
-```
-
-(You may want to **keep** the generated PDF in the repository so visitors can download and play immediately. If so, remove `*.pdf` from the ignore list.)
-
----
-
-Now your project is ready for GitHub! Push the files, and you'll have a polished, portfolio‑ready LaTeX game that highlights your programming skills.
