@@ -24,16 +24,16 @@ This project is the result of me trying to learn some more advanced **TeX progra
 
 ## How to Play
 
-1. **(Optional)**: Just download and use the `rubber-duck-debugger.pdf`
+**(Optional)**: Just download and use the `rubber-duck-debugger.pdf`
 
-2. **Clone the repository**:
+1. **Clone the repository**:
 
    ```bash
    git clone https://github.com/Brage1025/The-Rubber-Duck-Debugger-A-Interactive-LaTeX-Powered-Game.git
    cd rubber-duck-debugger
    ```
 
-3. **Compile the game** (requires a LaTeX distribution, e.g., TeX Live (What I'm using), MiKTeX, or MacTeX):
+2. **Compile the game** (requires a LaTeX distribution, e.g., TeX Live (What I'm using), MiKTeX, or MacTeX):
 
    ```bash
    pdflatex rubber-duck-debugger.tex
@@ -46,9 +46,9 @@ This project is the result of me trying to learn some more advanced **TeX progra
    latexmk -pdf rubber-duck-debugger.tex
    ```
 
-4. **Open the resulting PDF** (`rubber-duck-debugger.pdf`) in any PDF viewer (Adobe Reader, Preview, etc, or even some browsers.) and click the blue links to make choices.
+3. **Open the resulting PDF** (`rubber-duck-debugger.pdf`) in any PDF viewer (Adobe Reader, Preview, etc, or even some browsers.) and click the blue links to make choices.
 
-5. **Play through the story:** Can you fix the `\latex` error?
+4. **Play through the story:** Can you fix the `\latex` error?
 
 ## Project Structure
 
