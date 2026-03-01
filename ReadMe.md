@@ -8,7 +8,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 [![GitHub stars](https://img.shields.io/github/stars/Brage1025/The-Rubber-Duck-Debugger-A-Interactive-LaTeX-Powered-Game?style=social)](https://github.com/Brage1025/The-Rubber-Duck-Debugger-A-Interactive-LaTeX-Powered-Game)
 
-**A LaTeX‑powered interactive fiction game about debugging with a rubber duck**
+**A interactive LaTeX‑powered game**
 
 </div>
 
