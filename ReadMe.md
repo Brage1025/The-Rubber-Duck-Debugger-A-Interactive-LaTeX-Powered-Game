@@ -24,7 +24,7 @@ This project is the result of me trying to learn some more advanced **TeX progra
 
 ## How to Play
 
-**(Optional)**: Just download and use the `rubber-duck-debugger.pdf`
+**(Quick Play)**: Just download and use the `rubber-duck-debugger.pdf`
 
 1. **Clone the repository**:
 
